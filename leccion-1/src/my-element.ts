@@ -11,6 +11,7 @@ export class MyElement extends LitElement {
         }
 
         .login-container {
+            margin-top: 100px;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             border-radius: 20px;
@@ -113,7 +114,7 @@ export class MyElement extends LitElement {
   }
 
   private LoginSubmit = (e: Event): void => {
-
+    
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
   
@@ -125,8 +126,10 @@ export class MyElement extends LitElement {
 
   private loginUser(email: string, password: string): void {
 
-    if(localStorage.getItem(email) && password === localStorage.getItem(email)){
+    if(password === localStorage.getItem(email)){
+      window.location.href = '../pokemonPage.html';
       alert(`Inicio de sesion exitoso`);
+      
     }else{
       alert(`Inicio de sesion fallido`);
     }
