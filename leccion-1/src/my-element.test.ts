@@ -1,6 +1,6 @@
 import { expect, fixture } from "@open-wc/testing";
 import { Utils } from "./services/utils";
-import { LitElement, css, html } from "lit";
+import { html } from "lit";
 import { MyTester } from "./my-tester";
 import { FizzBuzz } from "./fizz-buzz";
 
